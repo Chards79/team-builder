@@ -19,7 +19,7 @@ const Form = props => {
 			...info,
 			id: Date.now()
 		};
-		props.addNewInfo(newInfo);
+		props.addMember(newInfo);
 		setInfo({ name: "", email: "", role: "" });
 	};
 	return (
@@ -45,7 +45,9 @@ const Form = props => {
 				value={info.role}
 				onChange={changeHandler}
 			/>
-			<button type="submit">Edit Member</button>
+			<button className="submit-button" type="submit">
+				Create Member
+			</button>
 		</form>
 	);
 };
